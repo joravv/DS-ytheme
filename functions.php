@@ -22,6 +22,9 @@ array(("jquery"));
 add_action('wp_enqueue_scripts', 'theme_scripts');
 }
 
-
+add_action("widgets-init", 'wpdocs_register_widgets');
+function wpdocs_register_widgets(){
+    register_widgets("My_Widget");
+}
 
 ?>
